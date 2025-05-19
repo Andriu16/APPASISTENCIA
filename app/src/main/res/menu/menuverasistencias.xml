@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/gp1">
+        <item
+            android:id="@+id/action_cambiar_hora_verasistencias"
+            android:title="Pausar y cambiar hora"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/action_retirar_todos_verasistencias"
+            android:title="Continuar hora actual"
+            android:visible="false"/>
+    </group>
+
+    <item
+        android:id="@+id/action_retirar_todos"
+        android:title="Cambiar hora salida Masivo"
+        android:visible="false"/>
+    <item
+        android:icon="@drawable/download"
+        android:id="@+id/action_sincronizar_asistencia"
+        android:title="@string/action_sincronizarasistencia" />
+
+</menu>

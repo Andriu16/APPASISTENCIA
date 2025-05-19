@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/ok2">
+        <item
+            android:id="@+id/action_pausar_cambiar_hora_2"
+            android:title="Pausar y cambiar hora" />
+
+        <item
+            android:id="@+id/action_hora_actual_2"
+            android:title="Continuar hora actual" />
+    </group>
+
+    <group android:id="@+id/ok3">
+        <item
+            android:id="@+id/action_cambiar_horas_masivo"
+            android:title="Cambiar Horas" />
+
+        <item
+            android:id="@+id/action_cambiar_productividad_masivo"
+            android:title="Cambiar Productividad" />
+    </group>
+
+    <group android:id="@+id/ok4">
+        <item
+            android:id="@+id/action_agregar_trabajador_conasistencia"
+            android:title="+ Trabajador Con Asist." />
+
+        <item
+            android:id="@+id/action_agregar_trabajador_sinasistencia"
+            android:title="+ Trabajador Sin Asist." />
+    </group>
+
+</menu>

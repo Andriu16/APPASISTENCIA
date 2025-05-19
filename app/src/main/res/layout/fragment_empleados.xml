@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Vista.ui.config.EmpleadosFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:fontFamily="@font/amaranth_bold"
+            android:gravity="left"
+            android:text="Empleados en el dispositivo"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txt_busqueda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:hint="Buscar por dni o nombre">
+
+            </EditText>
+
+            <Button
+                android:id="@+id/btnBuscar"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/Teal"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:icon="@drawable/baseline_search_24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/btnGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="-10dp">
+
+                <RadioButton
+                    android:id="@+id/rbtnTodos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Todos" />
+
+                <RadioButton
+                    android:id="@+id/rbtnSincronizados"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sincronizados" />
+
+                <RadioButton
+                    android:id="@+id/rbtnNoSincronizados"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No sincronizados" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth_bold"
+            android:text="Resultados de búsqueda: 0"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEmpleadoSqlite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10pt" />
+
+    </LinearLayout>
+
+</LinearLayout>

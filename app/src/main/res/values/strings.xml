@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">APP ASISTENCIA</string>
+    <string name="action_migrar">Descargar trabajadores</string>
+    <string name="action_EMPMigrar">Subir no sincronizados</string>
+    <string name="action_registro_puertas">Registro De Puertas</string>
+    <string name="action_sinmasivaempleados">Migracion masiva de empleados</string>
+    <string name="action_Docmigrar">Documentos a Migrar</string>
+    <string name="lblTituloBuscar">Ingrese nota a buscar!</string>
+    <string name="lblBtnTodo">Todo!</string>
+    <string name="hBuscar">Nombre de nota!</string>
+
+    <string name="action_retirartodos">Retirar a todos</string>
+    <string name="action_sincronizarasistencia">Subir Data</string>
+
+    <string name="action_descargar_asistencia">Descargar Asistencias</string>
+
+    <!--    DIALOG-->
+    <string name="lblControl">Control: </string>
+    <string name="lblNombre">Nombre: </string>
+    <string name="lblDescripcion">Descripción: </string>
+    <string name="hControl">Nothing!</string>
+    <string name="hNombre">Nothing!</string>
+    <string name="hDescripcion">Nothing!</string>
+    <string name="action_migrardoc">Obtener Tipo Doc.</string>
+    <string name="action_docsinmasiva">Tipos Doc a migrar</string>
+    <string name="action_doclistado">Lista de Documentos</string>
+    <string name="action_migrarEmpleados">Migracion de Empleados</string>
+    <string name="action_migrarAsistencias">Sincronización de Asistencias</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">NORTHERN SUN</string>
+    <string name="nav_header_subtitle">Versión 1.0</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Ver Asistencia</string>
+    <string name="action_settings2">Asist. Otras Puertas</string>
+    <string name="action_cambiar_horas">Pausar y cambiar hora</string>
+    <string name="action_seguir_horas">Continuar hora actual</string>
+    <string name="action_obtener_data_toma_asistencia">Obtener Data</string>
+
+    <string name="menu_home">1.- Registrar Asistencia</string>
+    <string name="menu_gallery">Registrar Tareo</string>
+    <string name="menu_slideshow">Consultas</string>
+    <string name="menu_configuration">5.- Configuración</string>
+    <string name="menu_cerrar_sesion">Cerrar Sesión</string>
+
+    <string-array name="Incidencias">
+        <item>DIRECTA</item>
+        <item>INDIRECTA</item>
+    </string-array>
+
+    <string-array name="TipoTareo">
+        <item>JORNAL</item>
+        <item>TAREA</item>
+        <item>DESTAJO</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Cerrando Sesión...</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="login_registrarse"><u>Registrarse</u></string>
+    <string name="login_olvidastecontrasena"><u>¿Olvidaste tu contraseña?</u></string>
+
+    <string name="lblCategorias"><b>Elija una opción</b></string>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_verasistencias"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_ver_asistencia"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <!--<item
+        android:id="@+id/action_otraspuertas"
+        android:orderInCategory="100"
+        android:title="@string/action_settings2"
+        app:showAsAction="never" /> -->
+
+    <group android:id="@+id/g1">
+        <item
+            android:id="@+id/action_cambiar_hora"
+            android:orderInCategory="100"
+            android:title="@string/action_cambiar_horas"
+            app:showAsAction="never"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/action_seguir_hora"
+            android:orderInCategory="100"
+            android:title="@string/action_seguir_horas"
+            app:showAsAction="never"
+            android:visible="false"/>
+    </group>
+
+    <item
+        android:visible="false"
+        android:id="@+id/action_descargar_data_tomaasistencia"
+        android:orderInCategory="100"
+        android:title="@string/action_obtener_data_toma_asistencia"
+        app:showAsAction="never" />
+
+    <item
+        android:icon="@drawable/download"
+        android:id="@+id/action_descargar_datos"
+        android:orderInCategory="100"
+        android:title="Descargar Data"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F7FA"
+    android:padding="12dp"
+    tools:context=".Vista.ui.control_puerta.ControlPuertaFragment">
+
+    <!-- ÚNICO HIJO DIRECTO DEL SCROLLVIEW: LinearLayout principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <!-- Título del formulario (Puedes añadir uno aquí si quieres) -->
+        <!--
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registro de Control de Puerta"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+        -->
+
+        <!-- Fecha y Hora - CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingEnd="4dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Fecha"
+                            android:textSize="14sp"
+                            android:textColor="#5D6D7E"/>
+
+                        <Button
+                            android:id="@+id/btnFecha"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_button"
+                            android:text="Seleccionar Fecha"
+                            android:textColor="@android:color/white"/>
+                        <!-- Considera usar MaterialButton para consistencia -->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="4dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hora"
+                            android:textSize="14sp"
+                            android:textColor="#5D6D7E"/>
+
+                        <Button
+                            android:id="@+id/btnHora"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_button"
+                            android:text="Hora Actual"
+                            android:textColor="@android:color/white" />
+                        <!-- Considera usar MaterialButton para consistencia -->
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tipo de Registro - CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo de Registro"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#2C3E50"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgTipoRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbIngreso"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ingreso"
+                        android:textColor="#5D6D7E"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/rbSalida"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Salida"
+                        android:textColor="#5D6D7E"/>
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Datos Personales - CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Datos Personales"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#2C3E50"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- DNI con botón de búsqueda (Corregido) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilDni"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <!-- *** USANDO TextInputEditText *** -->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDni"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="DNI"
+                        android:inputType="number"
+                        android:maxLength="8"
+                        android:autofillHints="off"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Botón RENIEC al lado -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBuscarRENIEC"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:padding="12dp"
+                    app:icon="@drawable/lupa_reniec"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="28dp"
+                    app:iconTint="@color/zxing_transparent"
+                    app:iconTintMode="add"
+                    android:contentDescription="Buscar RENIEC"/>
+
+            </LinearLayout>
+
+            <!-- Nombres -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <!-- *** USANDO TextInputEditText *** -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName|textCapWords"
+                android:hint="Nombres"
+                android:autofillHints="name"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Apellidos -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilApellidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <!-- *** USANDO TextInputEditText *** -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etApellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName|textCapWords"
+            android:hint="Apellidos"
+            android:autofillHints="name"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- El botón RENIEC ahora está dentro del LinearLayout del DNI -->
+
+</LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Información de Visita - CARD -->
+<androidx.cardview.widget.CardView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginBottom="12dp"
+app:cardCornerRadius="12dp"
+app:cardElevation="3dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Información de Registro"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#2C3E50"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Empresa/Área -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <!-- AutoCompleteTextView ya es el adecuado aquí -->
+        <AutoCompleteTextView
+            android:id="@+id/actvEmpresaArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences"
+            android:hint="Empresa/Área"
+            android:autofillHints="organization"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Motivo de Ingreso -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <!-- *** USANDO TextInputEditText *** -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etmotivo_ingreso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences"
+            android:hint="Motivo de ingreso"
+            android:autofillHints="off"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Placa del Vehículo -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPlacaVehiculo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters"
+            android:textAllCaps="true"
+            android:hint="Placa del vehículo (Opcional)"
+            android:autofillHints="off"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Observaciones -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etObservaciones"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="top|start"
+            android:inputType="textMultiLine|textCapSentences"
+            android:hint="Observaciones (Opcional)"
+            android:autofillHints="off"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Personal que Autorizó"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#2C3E50"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Selector Estilo Spinner (Spinner dentro de TextInputLayout) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPersonalAutorizo"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Seleccione quién autoriza (Opcional)"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp">
+
+                <!-- Usamos Spinner en lugar de AutoCompleteTextView -->
+                <Spinner
+                    android:id="@+id/spinnerPersonalAutorizo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/dropdownListPreferredItemHeight"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    />
+                <!-- Ajusta padding/minHeight para que se vea bien dentro del OutlinedBox -->
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+
+    <!-- IMÁGENES - CARD -->
+<androidx.cardview.widget.CardView
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginBottom="12dp"
+app:cardCornerRadius="12dp"
+app:cardElevation="3dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adjuntar Imágenes"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#2C3E50"
+        android:layout_marginBottom="12dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:weightSum="4">
+
+        <!-- Imagen 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="4dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <ImageView
+                    android:id="@+id/ivImagen1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Vista previa de imagen 1"/>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnAgregarFoto1"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="IMG 1"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Imagen 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="4dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <ImageView
+                    android:id="@+id/ivImagen2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Vista previa de imagen 2"/>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnAgregarFoto2"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="IMG 2"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Imagen 3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="4dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <ImageView
+                    android:id="@+id/ivImagen3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Vista previa de imagen 3"/>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnAgregarFoto3"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="IMG 3"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Imagen 4 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="4dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <ImageView
+                    android:id="@+id/ivImagen4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Vista previa de imagen 4"/>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnAgregarFoto4"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="IMG 4"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+
+    <!-- Botones Registrar/Limpiar -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:layout_marginTop="8dp"
+android:layout_marginBottom="16dp"
+android:weightSum="2">
+
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/btnRegistrar"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_marginEnd="4dp"
+    android:text="Registrar"
+    app:backgroundTint="@color/Blue"
+    app:cornerRadius="12dp"
+    android:textColor="@android:color/white"/>
+
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/btnLimpiar"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_marginStart="4dp"
+    android:text="Limpiar"
+    app:backgroundTint="@color/Red"
+    app:cornerRadius="12dp"
+    android:textColor="@android:color/white"/>
+</LinearLayout>
+    </LinearLayout>
+    </ScrollView>

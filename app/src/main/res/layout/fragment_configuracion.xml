@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Vista.ui.config.ConfiguracionFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="100px"
+        android:layout_marginRight="20px"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnTrabajadores"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="#2da4ff"
+            android:text="1. TRABAJADORES"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnPoblarDatos"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="#2da4ff"
+            android:text="1. OBTENER DATOS PARA REGISTRAR TAREO"
+            android:visibility="invisible"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnTipoDocumentos"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="#2da4ff"
+            android:text="2. TIPOS DE DOCUMENTO"
+            android:visibility="invisible"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnBackup"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/Green"
+            android:text="4. HACER BACKUP"
+            android:textAllCaps="false"
+            android:visibility="invisible"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnRestaurarBackup"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/Green"
+            android:text="5. RESTAURAR BACKUP"
+            android:textAllCaps="false"
+            android:visibility="invisible"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

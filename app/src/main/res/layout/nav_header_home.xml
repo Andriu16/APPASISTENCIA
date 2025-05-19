@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="200dp"
+    android:background="@drawable/side_nav_bar"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="8dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <!-- Primera sección con MARGEN SUPERIOR EXTRA GRANDE -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="75dp">
+
+        <TextView
+            android:id="@+id/versionActual"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="V.5.3"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/versionNueva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nueva versión 5.3"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingEnd="8dp"/>
+
+        <ImageView
+            android:id="@+id/iconNuevaVersion"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_url"
+            android:contentDescription="Actualizar"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+    </LinearLayout>
+
+    <!-- Segunda sección - Logo y nombre de la app -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="12dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="85dp"
+            android:layout_height="65dp"
+            android:contentDescription="@string/nav_header_desc"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/iconlogin" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="APP ASISTENCIA"
+            android:textAlignment="textEnd"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Usuario (oculto por defecto) -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:gravity="start"
+        android:visibility="gone"/>
+</LinearLayout>

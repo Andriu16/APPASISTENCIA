@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/gpver">
+
+    </group>
+
+
+    <item
+        android:icon="@drawable/ic_ver_control_puerta"
+        android:id="@+id/action_ver_puertas"
+        android:title="Ver Registo De Puertas" />
+
+</menu>

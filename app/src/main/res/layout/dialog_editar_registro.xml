@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/modal_background">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Datos del Registro"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/design_default_color_primary_dark"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Contenedor principal con bordes redondeados -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Fecha y Hora en tarjeta -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha y Hora"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnEditarFecha"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Fecha"
+
+                        app:iconGravity="textStart"
+                        android:textSize="14sp"
+                        app:cornerRadius="8dp"
+                        android:layout_marginEnd="4dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnEditarHora"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Hora"
+
+                        app:iconGravity="textStart"
+                        android:textSize="14sp"
+                        app:cornerRadius="8dp"
+                        android:layout_marginStart="4dp"/>
+                </LinearLayout>
+
+                <!-- DNI -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="12dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEditarDni"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="DNI"
+                        android:inputType="number"
+                        android:maxLength="8"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Nombres y Apellidos -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="12dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEditarNombresApellidos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nombres y Apellidos"
+                        android:inputType="textPersonName|textCapWords"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Area -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="12dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEditarArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Área"
+                        android:inputType="textCapSentences"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Motivo Ingreso -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="12dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                   >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEditarMotivo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Motivo de Ingreso"
+                        android:inputType="textCapSentences"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Placa Vehiculo -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="12dp"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEditarPlaca"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Placa Vehículo (Opcional)"
+                        android:inputType="textCapCharacters"
+                        android:textAllCaps="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Observacion -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEditarObservacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Observación (Opcional)"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:minLines="3"
+                        android:gravity="top"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Botones Guardar/Cancelar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditarCancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:text="Cancelar"
+                android:textColor="@color/Red"
+                app:strokeColor="@color/Red"
+                app:cornerRadius="8dp"
+                android:layout_marginEnd="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditarGuardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                app:cornerRadius="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pbEditarProgreso"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</ScrollView>

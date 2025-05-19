@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTituloProd"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="PRODUCTIVIDAD"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/GoldOscuro"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAgregarProductividad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/GoldOscuro"
+                android:text="AGREGAR ITEM"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:icon="@drawable/add"
+                app:iconSize="22dp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txtCantItems"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="DETALLES: 0 ITEMS"
+            android:gravity="left|center"
+            android:focusable="false"
+            android:clickable="false"
+            android:textColor="@color/GoldOscuro"
+            android:textSize="16sp"
+            android:checked="true"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDetalleProductividad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtTotalProductividad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="TOTAL PRODUCTIVIDAD: 0"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</ScrollView>

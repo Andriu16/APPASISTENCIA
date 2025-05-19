@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="@color/whitesmoke"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:contentPadding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtTrabajador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="00000000 - TRABAJADOR"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:contentPadding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+
+            <!--                CONDICIÓN-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtActividad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Actividad"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/arrow_down"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etactividad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--                CONDICIÓN-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtLabor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Labor"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/arrow_down"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etlabor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--                CONDICIÓN-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtConsumidor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Consumidor"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/arrow_down"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etconsumidor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--                PRECIO POR MAYOR-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtHoras"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Horas"
+                android:singleLine="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btnCerrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginEnd="5dp"
+                    android:backgroundTint="@color/Red"
+                    android:textAllCaps="false"
+                    android:text="Cerrar" />
+
+                <Button
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="5dp"
+                    android:textAllCaps="false"
+                    android:text="Aceptar" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

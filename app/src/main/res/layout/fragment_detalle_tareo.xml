@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Vista.ui.gallery.DetalleTareoFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtCultivoDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:gravity="left"
+            android:text="Cultivo: "
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtLaborDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Labor: "
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtNroTrabDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Por JORNAL : 5 Trabajadores"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txt_busqueda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:hint="Buscar por dni o nombre">
+
+            </EditText>
+
+            <Button
+                android:id="@+id/btnLeerQR"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/Teal"
+                android:textAllCaps="false"
+                android:layout_gravity="center_horizontal"
+                app:icon="@drawable/qrcode"
+                app:iconGravity="textEnd"
+                app:iconSize="25dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth_bold"
+            android:text="Resultados de búsqueda: 0"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txtItems2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/amaranth_bold"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEmpleadoSqlite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

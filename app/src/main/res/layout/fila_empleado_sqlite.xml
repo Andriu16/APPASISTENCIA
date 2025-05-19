@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="10dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:transitionName="cardTransition"
+        app:cardBackgroundColor="#F5F5F5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txtnroventa_cli"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:text="CODIGO QR"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtfechaventa_cli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="TIPO Y  NRO DOC:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtclienteventa_cli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="EMPLEADO:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtmodalidadventa_cli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="ORIGEN:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtnrooperacionventa_cli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="CODIGO INTERNO (per_codigonube):"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtdocumentoventa_cli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="ESTADO: "
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabSincronizar"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:backgroundTint="#ff0000"
+            app:elevation="15dp"
+            app:fabCustomSize="35dp"
+            app:srcCompat="@drawable/baseline_cloud_upload_24"
+            app:tint="@color/white" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

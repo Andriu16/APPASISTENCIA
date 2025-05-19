@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtFundoPacking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="left"
+            android:text="Fundo/Packing:"
+            android:textColor="@color/Blue"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/cboPacking"
+            style="@style/Widget.AppCompat.Spinner.DropDown"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:contentDescription="Fundo / Packing"
+            android:dropDownWidth="match_parent"
+            android:spinnerMode="dialog" />
+
+        <TextView
+            android:id="@+id/txtCultivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="left"
+            android:text="Cultivo/Producto:"
+            android:textColor="@color/Blue"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/cboCultivo"
+            style="@style/Widget.AppCompat.Spinner.DropDown"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:contentDescription="Cultivo / Producto"
+            android:dropDownWidth="match_parent"
+            android:spinnerMode="dialog" />
+
+        <TextView
+            android:id="@+id/txtIncidencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="left"
+            android:text="Incidencia:"
+            android:textColor="@color/Blue"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/cboIncidencia"
+            style="@style/Widget.AppCompat.Spinner.DropDown"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:contentDescription="Incidencia"
+            android:entries="@array/Incidencias"
+            android:dropDownWidth="match_parent"
+            android:spinnerMode="dialog" />
+
+
+        <TextView
+            android:id="@+id/txtParronLote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="left"
+            android:text="Parrón/Lote:"
+            android:textColor="@color/Blue"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/cboCentroCosto"
+            style="@style/Widget.AppCompat.Spinner.DropDown"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:contentDescription="Fundo / Packing"
+            android:dropDownWidth="match_parent"
+            android:spinnerMode="dialog" />
+
+        <TextView
+            android:id="@+id/txtActividad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="left"
+            android:text="Etapa:"
+            android:textColor="@color/Blue"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/cboActividad"
+            style="@style/Widget.AppCompat.Spinner.DropDown"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:contentDescription="Etapa"
+            android:dropDownWidth="match_parent"
+            android:spinnerMode="dialog" />
+
+        <TextView
+            android:id="@+id/txtLabor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="left"
+            android:text="Labor:"
+            android:textColor="@color/Blue"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/cboLabor"
+            style="@style/Widget.AppCompat.Spinner.DropDown"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:contentDescription="Labor / Centro Costo"
+            android:dropDownWidth="match_parent"
+            android:spinnerMode="dialog" />
+
+
+        <TextView
+            android:id="@+id/txtTTipoTareo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="left"
+            android:text="Tipo Tareo:"
+            android:textColor="@color/Blue"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/cboTipoTareo"
+            style="@style/Widget.AppCompat.Spinner.DropDown"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:contentDescription="Tipo de Tareo"
+            android:entries="@array/TipoTareo"
+            android:dropDownWidth="match_parent"
+            android:spinnerMode="dialog" />
+
+        <Button
+            android:id="@+id/btnSiguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/Green"
+            android:selectAllOnFocus="true"
+            android:shadowRadius="15"
+            android:text="GUARDAR"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:icon="@drawable/save"
+            app:iconSize="25dp"
+            app:iconTint="@color/white" />
+
+    </LinearLayout>
+</ScrollView>

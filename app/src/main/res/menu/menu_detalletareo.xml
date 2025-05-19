@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/dp1">
+        <item
+            android:id="@+id/action_pausar_cambiar_hora"
+            android:title="Pausar y cambiar hora" />
+
+        <item
+            android:id="@+id/action_hora_actual"
+            android:title="Continuar hora actual" />
+
+    </group>
+
+    <item
+        android:id="@+id/action_descargar_asistenciapuerta"
+        android:title="@string/action_descargar_asistencia" />
+
+</menu>

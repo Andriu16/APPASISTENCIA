@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/btnBuscarCCosto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@id/cvbody"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvFecha"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <Spinner
+                                    android:id="@+id/spinner6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvSupervisor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <Spinner
+                                    android:id="@+id/spnSupervisro"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvpacking"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <Spinner
+                                    android:id="@+id/spnFundo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvproducto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <Spinner
+                                    android:id="@+id/spnCultivo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvLabor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <Spinner
+                                    android:id="@+id/spnLabor"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvTipoTareo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp">
+
+                                <Spinner
+                                    android:id="@+id/spnTTareo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnaddCcosto"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="15dp"
+                    android:foregroundGravity="center_vertical|center"
+                    android:foregroundTintMode="screen"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    app:icon="@drawable/add" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvbody"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvHeader">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTareoCCosto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvFotter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvbody">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:text="Button" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

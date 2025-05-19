@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.home.TomarAsistenciaFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_gallery"
+            app:destination="@id/nav_gallery" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_configuration"
+            app:destination="@id/nav_configuration" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_slideshow"
+            app:destination="@id/nav_slideshow" />
+        <action
+            android:id="@+id/action_nav_home_to_asistenciaDiariaFragment"
+            app:destination="@id/asistenciaDiariaFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_asistenciaDiariaOnlineFragment"
+            app:destination="@id/asistenciaDiariaOnlineFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_consultarLoteFragment"
+            app:destination="@id/nav_consulta_lote" />
+        <action
+            android:id="@+id/action_nav_home_ver_asistencia"
+            app:destination="@id/nav_ver_asistencia" />
+        <action
+            android:id="@+id/action_nav_home_control_puerta"
+            app:destination="@id/nav_control_puerta" />
+
+        <action
+            android:id="@+id/action_nav_home_ver_control_puerta"
+            app:destination="@id/nav_ver_control_puerta" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.gallery.TareoNuevoFragment"
+        android:label="Registro de Tareo"
+        tools:layout="@layout/fragment_tareo_nuevo" >
+        <action
+            android:id="@+id/action_nav_gallery_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_gallery_to_tareosFragment"
+            app:destination="@id/tareosFragment" />
+        <action
+            android:id="@+id/action_nav_gallery_to_tareosNubeFragment"
+            app:destination="@id/tareosNubeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.slideshow.ConsultasFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" >
+        <action
+            android:id="@+id/action_nav_slideshow_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_cerrar_sesion"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.cerrarsesion.CerrarSesionFragment"
+        android:label="@string/menu_cerrar_sesion"
+        tools:layout="@layout/fragment_cerrar_sesion" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_configuration"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.config.ConfiguracionFragment"
+        android:label="@string/menu_configuration"
+        tools:layout="@layout/fragment_configuracion" >
+        <action
+            android:id="@+id/action_nav_configuration_to_tiposDocumentoFragment"
+            app:destination="@id/tiposDocumentoFragment" />
+        <action
+            android:id="@+id/action_nav_configuration_to_empleadosFragment"
+            app:destination="@id/empleadosFragment" />
+        <action
+            android:id="@+id/action_nav_configuration_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/tiposDocumentoFragment"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.config.TiposDocumentoFragment"
+        android:label="Tipos de Documento"
+        tools:layout="@layout/fragment_tipos_documento" >
+        <action
+            android:id="@+id/action_tiposDocumentoFragment_to_nav_configuration"
+            app:destination="@id/nav_configuration"
+            app:popUpTo="@id/nav_configuration"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/empleadosFragment"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.config.EmpleadosFragment"
+        android:label="Trabajadores"
+        tools:layout="@layout/fragment_empleados" >
+        <action
+            android:id="@+id/action_empleadosFragment_to_nav_configuration"
+            app:destination="@id/nav_configuration"
+            app:popUpTo="@id/nav_configuration"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/asistenciaDiariaFragment"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.home.AsistenciaDiariaFragment"
+        android:label="Asistencia Diaria" >
+        <action
+            android:id="@+id/action_asistenciaDiariaFragment_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_ver_asistencia"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.home.AsistenciaDiariaFragment"
+        tools:layout="@layout/fragment_asistencia_diaria"
+        android:label="Ver Asistencia" >
+        <action
+            android:id="@+id/action_asistenciaDiariaFragment_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_control_puerta"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.control_puerta.ControlPuertaFragment"
+        tools:layout="@layout/activity_control_de_puerta"
+        android:label="Control de puerta" >
+        <action
+            android:id="@+id/action_asistenciaDiariaFragment_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_ver_control_puerta"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.ver_control_puerta.VerControlPuertaFragment"
+        tools:layout="@layout/activity_ver_control_puerta"
+        android:label="Ver Control de puerta" >
+        <action
+            android:id="@+id/action_asistenciaDiariaFragment_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/tareosFragment"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.gallery.TareosFragment"
+        android:label="Tareos por sincronizar"
+        tools:layout="@layout/fragment_tareos" >
+        <action
+            android:id="@+id/action_tareosFragment_to_nav_gallery"
+            app:destination="@id/nav_gallery"
+            app:popUpTo="@id/nav_gallery"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_tareosFragment_to_detalleTareoFragment"
+            app:destination="@id/detalleTareoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tareosNubeFragment"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.gallery.TareosNubeFragment"
+        android:label="Tareos en la Nube"
+        tools:layout="@layout/fragment_tareos_nube" >
+        <action
+            android:id="@+id/action_tareosNubeFragment_to_nav_gallery"
+            app:destination="@id/nav_gallery"
+            app:popUpTo="@id/nav_gallery"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleTareoFragment"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.gallery.DetalleTareoFragment"
+        android:label="Ver Tareo"
+        tools:layout="@layout/fragment_detalle_tareo" >
+        <action
+            android:id="@+id/action_detalleTareoFragment_to_tareosFragment"
+            app:destination="@id/tareosFragment"
+            app:popUpTo="@id/tareosFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/asistenciaDiariaOnlineFragment"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.home.AsistenciaDiariaOnlineFragment"
+        android:label="Asist. Otras Puertas"
+        tools:layout="@layout/fragment_asistencia_diaria_online" >
+        <action
+            android:id="@+id/action_asistenciaDiariaOnlineFragment_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_consulta_lote"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.Lotes.ConsultarLoteFragment"
+        android:label="fragment_consultar_lote"
+        tools:layout="@layout/fragment_consultar_lote" >
+        <action
+            android:id="@+id/action_consultarLoteFragment_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_consulta_lote_to_compraMenuOpFragment"
+            app:destination="@id/compraMenuOpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/compraMenuOpFragment"
+        android:name="dev.app.peru.guidecsharp.Vista.ui.Lotes.CompraMenuOpFragment"
+        android:label="fragment_menu_op_compra"
+        tools:layout="@layout/fragment_menu_op_compra" >
+        <action
+            android:id="@+id/action_compraMenuOpFragment_to_nav_consulta_lote"
+            app:destination="@id/nav_consulta_lote"
+            app:popUpTo="@id/nav_consulta_lote"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+</navigation>

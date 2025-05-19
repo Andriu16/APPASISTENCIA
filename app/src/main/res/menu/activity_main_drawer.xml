@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:showIn="navigation_view">
+
+    <item android:title="OPERACIONES">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/ic_registrar_asistencia"
+                    android:title="@string/menu_home"
+
+                    />
+               <item
+                    android:id="@+id/nav_ver_asistencia"
+                    android:icon="@drawable/ic_ver_asistencia"
+                    android:title="2.- Ver Asistencia" />
+                <item
+                    android:id="@+id/nav_control_puerta"
+                    android:icon="@drawable/ic_registro_puerta"
+                    android:title="3.- Registro De Puerta" />
+                <item
+                    android:id="@+id/nav_ver_control_puerta"
+                    android:icon="@drawable/ic_ver_control_puerta"
+                    android:title="4.- Ver Control de Puerta" />
+
+
+                <item
+                    android:id="@+id/nav_gallery"
+                    android:icon="@drawable/ic_registrar"
+                    android:title="@string/menu_gallery"
+                    android:visible="false"/>
+
+
+               <item
+                    android:id="@+id/nav_consulta_lote"
+                    android:icon="@drawable/ic_qr"
+                    android:title="Consultar Lote"
+                   android:visible="false"/>
+            </group>
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_question"
+            android:title="@string/menu_slideshow"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_configuration"
+            android:icon="@drawable/ic_configuracion"
+            android:title="@string/menu_configuration" />
+    </group>
+
+    <group
+        android:id="@+id/gp1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_cerrar_sesion"
+            android:icon="@drawable/logout"
+            android:title="@string/menu_cerrar_sesion"
+            android:titleTextColor="@color/Red"
+            />
+
+    </group>
+
+</menu>

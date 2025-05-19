@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/white"
+    tools:context=".Vista.ui.home.TomarAsistenciaFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/Paddin_Tamaño"
+        android:paddingBottom="@dimen/Paddin_Tamaño">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilFecha"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Fecha"
+                app:layout_constraintEnd_toStartOf="@id/tilHora"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtFecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:text="Fecha">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilHora"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Hora"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tilFecha"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtHora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:inputType="text"
+                    android:onClick="clickHora"
+                    android:text="Hora"
+                    android:textColor="@color/black">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBoody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingTop="@dimen/Paddin_Tamaño"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        app:contentPadding="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnNuevo"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:backgroundTint="@color/whitesmoke"
+                        android:selectAllOnFocus="true"
+                        android:shadowRadius="15"
+
+                        android:text="NUEVO"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:icon="@drawable/add"
+                        app:iconGravity="textEnd"
+                        app:iconSize="@dimen/text_icon_size"
+                        app:iconTint="@color/black" />
+
+                    <Button
+                        android:id="@+id/btnBuscarCodigoQR"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/whitesmoke"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:selectAllOnFocus="true"
+                        android:shadowRadius="15"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:icon="@drawable/baseline_search_24"
+                        app:iconSize="20dp"
+                        app:iconTint="@color/black" />
+
+                    <Button
+                        android:id="@+id/btnLeerQR"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/whitesmoke"
+                        android:selectAllOnFocus="true"
+                        android:shadowRadius="15"
+                        android:text="LEER"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:icon="@drawable/qrcode"
+                        app:iconGravity="textEnd"
+                        app:iconSize="20dp"
+                        app:iconTint="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/rdbGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rdbIngreso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="@dimen/marginVertical"
+                            android:padding="@dimen/marginVertical"
+                            android:text="INGRESO"
+                            android:checked="true"/>
+
+                        <RadioButton
+                            android:id="@+id/rbdSalida"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:padding="@dimen/marginVertical"
+                            android:text="SALIDA" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCodigoQR"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Buscar por QR"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtCodigoQr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTipoDoc"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/Paddin_Tamaño"
+                    android:hint="TIPO Documento"
+                    android:visibility="visible">
+
+                    <Spinner
+                        android:id="@+id/cboTipoDoc"
+                        style="@android:style/Widget.Material.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_Min">
+
+                    </Spinner>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilNroDoc"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:hint="NRO. DOCUMENTO"
+                        app:endIconMode="clear_text"
+                        app:layout_constraintEnd_toStartOf="@+id/btnBuscarRENIEC"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtNroDoc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="15">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <Button
+                        android:id="@+id/btnBuscarRENIEC"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        app:icon="@drawable/lupa_reniec"
+                        app:iconGravity="start"
+                        app:iconPadding="10dp"
+                        app:iconSize="50dp"
+                        app:iconTint="@color/zxing_transparent"
+                        app:iconTintMode="add"
+                        app:layout_constraintBottom_toBottomOf="@id/tilNroDoc"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tilNroDoc"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNombres"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/Paddin_Tamaño"
+                    android:hint="NOMBRES"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtNombres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"></LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+                <!-- tILPaterno-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPaterno"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/Paddin_Tamaño"
+                    android:hint="APELLIDO PATERNO"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtPaterno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+                <!-- tILMaterno-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilMaterno"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/Paddin_Tamaño"
+                    android:hint="APELLIDO MATERNO"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtMaterno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+                <!--tILDireccion-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDireccion"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/Paddin_Tamaño"
+                    android:hint="DIRECCIÓN"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtDirecion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+                <!-- tILNacionalidad-->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvFooter"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_Min"
+                    android:layout_marginTop="@dimen/Paddin_Tamaño">
+                    <!--tilBotonesFooter    btnGuardar  -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/btnGuardar"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:selectAllOnFocus="true"
+                            android:shadowRadius="15"
+                            android:text="GUARDAR"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            app:icon="@drawable/save"
+                            app:iconSize="@dimen/text_icon_size"
+                            app:iconTint="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--cvFooter-->
+
+</LinearLayout>

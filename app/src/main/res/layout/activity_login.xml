@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Vista.LoginActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.GuideCSharp.AppBarOverlay"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.GuideCSharp.PopupOverlay"
+            app:title="">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="APP ASISTENCIA"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="230dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="100px"
+        android:src="@drawable/iconlogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="321dp"
+        android:layout_height="244dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="15dp"
+        app:contentPadding="10dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_usuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/forma_cajas_login"
+                    android:hint="USUARIO"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_clave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtClave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/forma_cajas_login"
+                    android:hint="CONTRASEÑA"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="INGRESAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/txtVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="108dp"
+        android:text="v 5.3"
+        android:textSize="12dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/chkRecordar"
+        app:layout_constraintEnd_toStartOf="@+id/chkRecordar"
+        app:layout_constraintTop_toTopOf="@+id/chkRecordar"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/chkRecordar"
+        android:layout_width="166dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="8dp"
+        android:minHeight="48dp"
+        android:text="¿Recordar contraseña?"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

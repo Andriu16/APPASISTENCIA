@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/whitesmoke"
+    tools:context=".Vista.ui.gallery.TareoNuevoFragment">
+
+    <LinearLayout
+        android:id="@+id/llIniciox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvInformacion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp"
+            app:contentPadding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtGrupoTrabajo"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Grupo de Trabajo"
+                    app:endIconDrawable="@drawable/arrow_down"
+                    app:endIconMode="custom">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etgrupotrabajo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtTurno"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Turno"
+                    app:endIconDrawable="@drawable/arrow_down"
+                    app:endIconMode="custom">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etturno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTrabajadores"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp"
+            app:contentPadding="15dp">
+
+            <Button
+                android:id="@+id/btnBuscarTrabajador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BUSCAR TRABAJADOR"
+                app:icon="@drawable/ic_buscar_white" />
+
+            <TextView
+                android:id="@+id/txtItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Registros: 0"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProductoSqlite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="75dp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/esquinas_guardar_registro"
+        android:gravity="bottom|center"
+        android:layout_marginTop="-70dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnSiguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:text="GUARDAR DATOS" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

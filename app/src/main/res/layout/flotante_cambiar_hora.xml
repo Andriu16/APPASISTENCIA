@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtMañana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="TURNO : MAÑANA"
+            android:textAlignment="center"
+            android:textColor="@color/Blue"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chk_ini_dia"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Blue"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/txtFecha1"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="dd/MM/YYYY"
+                android:maxLength="10"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtHora1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="hh"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtMin1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:hint="mm"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtampm1"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="tt"
+                android:text="a.m."
+                android:enabled="false"
+                android:textAlignment="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chk_fin_dia"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Blue"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/txtFecha11"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="dd/MM/YYYY"
+                android:maxLength="10"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtHora11"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="hh"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtMin11"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:hint="mm"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtampm11"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="tt"
+                android:text="p.m."
+                android:enabled="false"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtTarde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TURNO : TARDE"
+            android:textAlignment="center"
+            android:textColor="@color/Blue"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chk_ini_tarde"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Blue"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/txtFecha2"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="dd/MM/YYYY"
+                android:maxLength="10"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtHora2"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="hh"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtMin2"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:hint="mm"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtampm2"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="tt"
+                android:text="p.m."
+                android:enabled="false"
+                android:textAlignment="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chk_fin_tarde"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Blue"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/txtFecha22"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="dd/MM/YYYY"
+                android:maxLength="10"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtHora22"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="hh"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtMin22"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:hint="mm"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtampm22"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="tt"
+                android:text="p.m."
+                android:enabled="false"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtNoche"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TURNO : NOCHE"
+            android:textAlignment="center"
+            android:textColor="@color/Blue"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chk_ini_noche"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Blue"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/txtFecha3"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="dd/MM/YYYY"
+                android:maxLength="10"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtHora3"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="hh"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtMin3"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:hint="mm"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtampm3"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="tt"
+                android:text="p.m."
+                android:enabled="false"
+                android:textAlignment="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chk_fin_noche"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Blue"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/txtFecha33"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="dd/MM/YYYY"
+                android:maxLength="10"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtHora33"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:hint="hh"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtMin33"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:hint="mm"
+                android:inputType="number"
+                android:maxLength="2"
+                android:enabled="false"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txtampm33"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="tt"
+                android:text="a.m."
+                android:enabled="false"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtTotalHoras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="TOTAL HORAS: [ 0:0 ]"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</ScrollView>
